@@ -14,7 +14,7 @@ pipeline {
 
             stage ("secondStage") {
                 steps {
-                    sh 'echo "Everyone'
+                    sh 'echo "Everyone"'
                 }
             }
             stage ("thirdStage") {
