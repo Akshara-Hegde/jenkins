@@ -10,7 +10,7 @@ pipeline {
                 '''
             }
         }
-        parallel{
+  
 
             stage ("secondStage") {
                 steps {
@@ -22,7 +22,7 @@ pipeline {
                     sh 'sleep 10'
                 }
             }
-        }
+        
     }
 }
 
