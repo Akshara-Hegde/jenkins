@@ -1,0 +1,28 @@
+pipeline {
+    agent any
+
+    stages{
+        stage ("firstStage") {
+            steps{
+                sh '''
+                echo "hello"
+                sleep 10
+                '''
+            }
+        }
+        parallel{
+
+            stage ("secondStage") {
+                steps {
+                    sh 'echo "Everyone'
+                }
+            }
+            stage ("thirdStage") {
+                steps {
+                    sh 'sleep 10'
+                }
+            }
+        }
+    }
+}
+
